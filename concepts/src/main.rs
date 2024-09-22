@@ -1,4 +1,7 @@
 mod conditional;
+mod ch_strings;
+mod ownership;
+use ownership::ownership::*;
 
 fn main() {
     let number = 6;
@@ -24,6 +27,16 @@ fn main() {
     counting_up();
 
     conditional::test_condition();
+    conditional::lift_off();
+    conditional::using_for_loop();
+    conditional::reverse_iteration();
+    // conditional::collection_through_loop();
+
+    // lets talk about string and ownership
+    ch_strings::string_slice();
+    // ownership::data_string_ownership(); use all the functions from ownership module
+    data_string_ownership()
+    // ownership::data_string_ownership();
 }
 
 fn counter() {
