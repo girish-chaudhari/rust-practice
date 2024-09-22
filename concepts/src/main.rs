@@ -35,7 +35,8 @@ fn main() {
     // lets talk about string and ownership
     ch_strings::string_slice();
     // ownership::data_string_ownership(); use all the functions from ownership module
-    data_string_ownership()
+    data_string_ownership();
+    try_ownership();
     // ownership::data_string_ownership();
 }
 

@@ -14,4 +14,16 @@ pub mod ownership {
   
       println!("s1 = {s1}, s2 = {s2}");
     }
+    pub fn try_ownership() {
+      let s1 = String::from("hello");
+      
+      take_ownership(s1);
+  
+      // println!("s1 = {s1}, s2 = {s2}");
+    }
+   pub fn take_ownership(some_string: String) {
+      println!("some_string: {some_string}");
+    }
+
+   
 }
