@@ -1,0 +1,10 @@
+[package]
+name = "file_manager"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.15"
+egui = "0.15"
+egui_extras = "0.28.1"
+image = "0.23"
