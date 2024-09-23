@@ -1,7 +1,9 @@
-mod conditional;
 mod ch_strings;
 mod ownership;
 use ownership::ownership::*;
+use concepts::conditional;
+use concepts::ownership::try_ownership_with_int;
+use concepts::mods::{my_mod, function};
 
 fn main() {
     let number = 6;
@@ -30,6 +32,7 @@ fn main() {
     conditional::lift_off();
     conditional::using_for_loop();
     conditional::reverse_iteration();
+    try_ownership_with_int();
     // conditional::collection_through_loop();
 
     // lets talk about string and ownership
@@ -37,6 +40,9 @@ fn main() {
     // ownership::data_string_ownership(); use all the functions from ownership module
     data_string_ownership();
     try_ownership();
+    function();
+    my_mod::call_public_function_in_my_mod();
+
     // ownership::data_string_ownership();
 }
 
