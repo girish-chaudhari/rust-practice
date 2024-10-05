@@ -1,42 +1,39 @@
-enum IpAddrKind {
-    V4,
-    V6,
-}
+// enum IpAddrKind {
+//     V4,
+//     V6,
+// }
 
-struct IPAddr {
-    // kind: IpAddrKind,
-    // address: String,
-    V4(String),
-    V6(String),
-}
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-// let home = IPAddr {
+// struct IPAddr {
+//     kind: IpAddrKind,
+//     address: String,
+// }
+
+// enum Message {
+//     Quit,
+//     Move { x: i32, y: i32 },
+//     Write(String),
+//     ChangeColor(i32, i32, i32),
+// }
+
+// static HOME: IPAddr = IPAddr {
 //     kind: IpAddrKind::V4,
-//     address: String::from("192:168:1:1"),
-//     };
+//     address: "127.0.0.1".to_string(),
+// };
 
-// let loopback = IpAddr {
-//        kind: IpAddrKind::V6,
-//        address: String::from("::1"),
-//    };
-//
-const home = IpAddr::V4(String::from("127.0.0.1"));
+// static LOOPBACK: IPAddr = IPAddr {
+//     kind: IpAddrKind::V6,
+//     address: "::1".to_string(),
+// };
 
-const loopback = IpAddr::V6(String::from("::1"));
+// pub struct HelloWorld;
 
-pub impl HelloWorld {
-    fn say_hello() {
-        println!("Hello, world from HelloWorld struct!");
-    }
-}
+// impl HelloWorld {
+//     fn say_hello() {
+//         println!("Hello, world from HelloWorld struct!");
+//     }
+// }
 
-
-mod fn message_func() {
+mod message_func {
     enum Message {
         Quit,
         Move { x: i32, y: i32 },
@@ -50,6 +47,8 @@ mod fn message_func() {
         }
     }
 
-    let m = Message::Write(String::from("hello"));
-    m.call();
+    pub fn call_message() {
+        let m = Message::Write(String::from("hello"));
+        m.call();
+    }
 }
