@@ -12,6 +12,10 @@ impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
+
+    fn check_width(&self) -> bool {
+        self.width > 0
+    }
     
 }
 
@@ -36,12 +40,21 @@ let scale = 2;
 
     println!("rect1 is {rect:?}");
 
-print!("The area of the rectangle is {} square pixels.", rect.area());
+println!("The area of the rectangle is {} square pixels.", rect.area());
 // let's try to use the can_hold method
 let rect2 = Rectangle {
     width: 10,
     height: 40,
 };
+
+println!("does rect has sufficient width? {}", if rect.check_width() { "yes" } else { "no" });
+
+let rect3 = Rectangle {
+    width: 60,
+    height: 45,
+};
+
+println!("Can rect hold rect3? {}", rect.can_hold(&rect3));
 
 println!("Can rect hold rect2? {}", rect.can_hold(&rect2));
     println!(
